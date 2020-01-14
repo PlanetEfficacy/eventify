@@ -1,0 +1,25 @@
+<script>
+  window.addEventListener('load', function() {
+    console.log('Page is loaded');
+  });
+  
+  function getPageTwo() {
+    google.script.run.withSuccessHandler(showPartTwo).getPageTwoFromServer();
+  }
+  
+  function getPageThree() {
+    google.script.run.withSuccessHandler(showPartThree).getPageThreeFromServer();
+  }
+  
+  
+  function showPartTwo(html) {
+    $('#select-calendar').toggleClass('hide');
+    $('#select-calendar').insertAfter(html)
+  }
+  
+    
+  function showPartThree(html) {
+    $('#create-form').toggleClass('hide');
+    $('#create-form').insertAfter(html)
+  }
+</script>

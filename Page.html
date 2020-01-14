@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <?!= include('Stylesheet'); ?>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+  </head>
+  <body>
+    <div class="container center-align" id="select-calendar">
+      <h5>Select Calendar</h5>
+      <img src="https://drive.google.com/uc?export=view&id=1qG8jreJwFmgc44Rso3uvj60aJEGrqNuy" alt="calendar">
+      <div class="block form-group">
+        <label for="select">Calendars:</label>
+        <select id="select">
+          <option selected>Google Docs</option>
+          <option>Google Forms</option>
+          <option>Google Sheets</option>
+        </select>
+      </div>
+      <div class="container center-align footer">
+        <p>
+          <a href="#" class="button action" onclick="getPageTwo()">Submit</a>
+        </p>
+      </div>
+    </div>
+    <?!= include('JavaScript'); ?>
+    <script src="https://unpkg.com/@vladocar/nanojs@1.0.5/src/nanoJS.min.js"></script>
+  </body>
+</html>
