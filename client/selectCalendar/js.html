@@ -1,0 +1,14 @@
+<script type="text/javascript">
+  function getCreateFormView() {
+    google.script.run.withSuccessHandler(showCreateFormView).getCreateFormViewFromServer();
+  }
+
+  function showCreateFormView(html) {
+    $('#select-calendar').toggleClass('hide');
+    $('#select-calendar').insertAfter(html)
+  }
+
+  function setCalendarId(id) {
+    google.script.run.setCalendarId(id);
+  }
+</script>

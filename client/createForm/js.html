@@ -1,0 +1,11 @@
+<script type="text/javascript">
+  function getEnableDisableView() {
+    google.script.run.createFormQuestions();
+    google.script.run.withSuccessHandler(showEnableDisableView).getEnableDisableViewFromServer();
+  }
+
+  function showEnableDisableView(html) {
+    $('#create-form').toggleClass('hide');
+    $('#create-form').insertAfter(html)
+  }
+</script>

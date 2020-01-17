@@ -1,0 +1,10 @@
+<script type="text/javascript">
+  function getSelectCalendarView() {
+    google.script.run.withSuccessHandler(showSelectCalendarView).getSelectCalendarViewFromServer();
+  }
+
+  function showSelectCalendarView(html) {
+    $('#setup').toggleClass('hide');
+    $('#setup').insertAfter(html)
+  }
+</script>
