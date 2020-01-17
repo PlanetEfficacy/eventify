@@ -1,25 +1,55 @@
 <script>
-  window.addEventListener('load', function() {
-    console.log('Page is loaded');
-  });
-  
-  function getPageTwo() {
-    google.script.run.withSuccessHandler(showPartTwo).getPageTwoFromServer();
+  function setCalendarId(id) {
+    google.script.run.setCalendarId(id);
+  }
+
+  function getSelectCalendarView() {
+    google.script.run.withSuccessHandler(showSelectCalendarView).getSelectCalendarViewFromServer();
   }
   
-  function getPageThree() {
-    google.script.run.withSuccessHandler(showPartThree).getPageThreeFromServer();
+  function showSelectCalendarView(html) {
+    $('#setup').toggleClass('hide');
+    $('#setup').insertAfter(html)
   }
   
+  function getCreateFormView() {
+    google.script.run.withSuccessHandler(showCreateFormView).getCreateFormViewFromServer();
+  }
   
-  function showPartTwo(html) {
+  function showCreateFormView(html) {
     $('#select-calendar').toggleClass('hide');
     $('#select-calendar').insertAfter(html)
   }
   
-    
-  function showPartThree(html) {
+  function getEnableDisableView() {
+    google.script.run.createFormQuestions();
+    google.script.run.withSuccessHandler(showEnableDisableView).getEnableDisableViewFromServer();
+  }
+  
+  function showEnableDisableView(html) {
     $('#create-form').toggleClass('hide');
     $('#create-form').insertAfter(html)
+  }
+    
+  function getSupportView() {
+    google.script.run.withSuccessHandler(showSupportView).getSupportViewFromServer();
+  } 
+    
+  function showSupportView(html) {
+    $('#enable-disable').toggleClass('hide');
+    $('#enable-disable').insertAfter(html)
+  }
+  
+  function toggleDisableButton() {
+    toggleButtons();
+  }
+  
+  function toggleEnableButton() {
+    toggleButtons();
+  }
+  
+  function toggleButtons() {
+    $('#enable').toggleClass('hide');
+    $('#disable').toggleClass('hide');
   }
 </script>
