@@ -5,6 +5,11 @@
     <?!= include('client/stylesheet'); ?>
     <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
   </head>
+  <head>
+    <base target="_top">
+    <?!= include('client/stylesheet'); ?>
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+  </head>
   <body>
     <div class="container" id="setup">
       <div class="center">
@@ -22,10 +27,7 @@
       </div>
     </div>
     <?!= include('client/setup/js'); ?>
-    <?!= include('client/selectCalendar/js'); ?>
-    <?!= include('client/createForm/js'); ?>
-    <?!= include('client/enableDisable/js'); ?>
-    <?!= include('client/support/js'); ?>
+
     <script src="https://unpkg.com/@vladocar/nanojs@1.0.5/src/nanoJS.min.js"></script>
   </body>
 </html>

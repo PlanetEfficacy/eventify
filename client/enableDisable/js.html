@@ -8,16 +8,18 @@
     $('#enable-disable').insertAfter(html)
   }
 
-  function toggleDisableButton() {
+  function enableEventify() {
     toggleButtons();
+    google.script.run.enableEventify();
   }
 
-  function toggleEnableButton() {
+  function disableEventify() {
     toggleButtons();
+    google.script.run.disableEventify();
   }
 
   function toggleButtons() {
-    $('#enable').toggleClass('hide');
-    $('#disable').toggleClass('hide');
+    $('.eventify-enabled').toggleClass('hide');
+    $('.eventify-disabled').toggleClass('hide');
   }
 </script>
