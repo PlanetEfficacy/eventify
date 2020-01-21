@@ -14,7 +14,12 @@
           <option value="">Select Calendar</option>
           <? var calendarData = getCalendarData(); ?>
           <? for (var i = 0; i < calendarData.length; i++) { ?>
-            <option value=<?= calendarData[i].id; ?>>
+            <option
+              value=<?= calendarData[i].id; ?>
+                <? if(calendarData[i].id == getCalendarId()) { ?>
+                  selected
+                <? } ?>
+            >
               <?= calendarData[i].name; ?>
             </option>
           <? } ?>
