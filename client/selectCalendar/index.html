@@ -13,7 +13,7 @@
       <div>
         <label for="select">Calendars:</label>
         <p class="secondary calendar-loading">loading...</p>
-        <select id='calendar-select' class="hide calendar-loading" onchange="setCalendarId(this.value)">
+        <select id='calendar-select' class="hide center calendar-loading" onchange="setCalendarId(this.value)">
         </select>
       </div>
       <div class="container center footer">
@@ -22,9 +22,15 @@
         </p>
       </div>
     </div>
-    <script src="https://unpkg.com/@vladocar/nanojs@1.0.5/src/nanoJS.min.js"></script>
+    <div id="create-form">
+    </div>
+    <div id="enable-script">
+    </div>
+    <script> console.log("HELLO WORLD") </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <?!= include('client/selectCalendar/js'); ?>
     <?!= include('client/createForm/js'); ?>
     <?!= include('client/enableDisable/js'); ?>
+
   </body>
 </html>
