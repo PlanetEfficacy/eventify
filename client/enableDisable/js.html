@@ -1,25 +1,16 @@
 <script type="text/javascript">
-  function getSupportView() {
-    google.script.run.withSuccessHandler(showSupportView).getSupportViewFromServer();
-  }
-
-  function showSupportView(html) {
-    $('#enable-disable').toggleClass('hide');
-    $('#enable-disable').insertAfter(html)
-  }
-
-  function enableEventify() {
+  function enablePrettyGoodBooking() {
     toggleButtons();
-    google.script.run.enableEventify();
+    google.script.run.enablePrettyGoodBooking();
   }
 
-  function disableEventify() {
+  function disablePrettyGoodBooking() {
     toggleButtons();
-    google.script.run.disableEventify();
+    google.script.run.disablePrettyGoodBooking();
   }
 
   function toggleButtons() {
-    $('.eventify-enabled').toggleClass('hide');
-    $('.eventify-disabled').toggleClass('hide');
+    $('.pretty-good-booking-enabled').toggleClass('hide');
+    $('.pretty-good-booking-disabled').toggleClass('hide');
   }
 </script>

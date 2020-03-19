@@ -12,19 +12,8 @@
       <p class="gray justify">Select a target calendar that will house form-generated events.</p>
       <div>
         <label for="select">Calendars:</label>
-        <select onchange="setCalendarId(this.value)">
-          <option value="">Select Calendar</option>
-          <? var calendarData = getCalendarData(); ?>
-          <? for (var i = 0; i < calendarData.length; i++) { ?>
-            <option
-              value=<?= calendarData[i].id; ?>
-                <? if(calendarData[i].id == getCalendarId()) { ?>
-                  selected
-                <? } ?>
-            >
-              <?= calendarData[i].name; ?>
-            </option>
-          <? } ?>
+        <p class="secondary calendar-loading">loading...</p>
+        <select id='calendar-select' class="hide calendar-loading" onchange="setCalendarId(this.value)">
         </select>
       </div>
       <div class="container center footer">
@@ -37,6 +26,5 @@
     <?!= include('client/selectCalendar/js'); ?>
     <?!= include('client/createForm/js'); ?>
     <?!= include('client/enableDisable/js'); ?>
-    <?!= include('client/support/js'); ?>
   </body>
 </html>

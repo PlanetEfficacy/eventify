@@ -1,4 +1,18 @@
 <script type="text/javascript">
+  $(function() {
+    console.log("getting calendar options")
+    google.script.run.withSuccessHandler(showSelect)
+        .getCalendarOptions();
+  });
+
+  function showSelect(html) {
+    console.log("showing calendar options")
+    console.log(html)
+    var select = $('#calendar_select');
+    select.html(html);
+    $('.calendar-loading').toggleClass('hide');
+  }
+
   function getCreateFormView() {
     google.script.run.withSuccessHandler(showCreateFormView).getCreateFormViewFromServer();
   }
